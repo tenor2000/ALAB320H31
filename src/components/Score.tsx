@@ -1,14 +1,10 @@
 import type { ScoreType } from "../assets/learnerData.ts";
 
-type ScoreProps = {
-  scoreObj: ScoreType;
-};
-
-export default function Score({ scoreObj }: ScoreProps) {
+export default function Score({ date, score }: ScoreType) {
   return (
     <li>
-      <p>Date: {scoreObj.date}</p>
-      <p>Score: {scoreObj.score}</p>
+      <p>Date: {date}</p>
+      <p>Score: {score}</p>
     </li>
   );
 }

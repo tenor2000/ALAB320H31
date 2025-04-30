@@ -8,7 +8,11 @@ export default function Learner({ name, bio, scores }: LearnerType) {
       <p>{bio}</p>
       <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>
         {scores.map((scoreObj) => (
-          <Score scoreObj={scoreObj} key={scoreObj.date + scoreObj.score} />
+          <Score
+            date={scoreObj.date}
+            score={scoreObj.score}
+            key={scoreObj.date + scoreObj.score}
+          />
         ))}
       </ul>
     </div>
